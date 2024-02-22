@@ -11,16 +11,12 @@ app.set('view engine', 'ejs');
 
 config()
 
-<<<<<<< HEAD
+
 app.use((req, res, next) => {
-    res.setHeader('Refresh', '30'); // Establece la cabecera Refresh para recargar la página cada 20 segundos
+    res.setHeader('Refresh', '25'); // Establece la cabecera Refresh para recargar la página cada 20 segundos
     next();
 });
 
 app.use('', employeerRouter);
-=======
-
-app.use('/', productsRouter);
->>>>>>> 167ffd94dc647bcb21c02998c4d3308c75cdb63e
 
 export default app;
