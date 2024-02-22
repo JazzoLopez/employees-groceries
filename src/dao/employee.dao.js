@@ -29,7 +29,7 @@ else{
 
 EmployeeDao.deleteOne = async(workerNumber)=>{
 const employeeDelete = await Employee.findOneAndDelete({workerNumber:workerNumber});
-if(deleteOne != null){ 
+if(employeeDelete != null){ 
     return true;
 
 }

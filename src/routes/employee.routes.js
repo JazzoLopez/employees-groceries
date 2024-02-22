@@ -4,14 +4,15 @@ import {getAll, getOne, insertOne, updateOne, deleteOne, getJounge, getSalary,  
 const router = Router();
 
 router.get('/',getAll)
-
 router.get('/mejor_empleado', getRating)
 router.get('/:workerNumber',getOne)
-router.post('/',insertOne)
-router.post('/:workerNumber',updateOne)
 router.get('/delete/:workerNumber',deleteOne)
-
 router.get('/getJounge',getJounge)
 router.get('/getSalary',getSalary)
+
+router.post('/',insertOne)
+router.post('/:workerNumber',updateOne)
+
+
 
 export default router;  
