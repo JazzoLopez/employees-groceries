@@ -1,10 +1,10 @@
 import Router from 'express';
-import {getAll, getOne, insertOne, updateOne, deleteOne, getJounge, getSalary, getInsertOne, refresh, getRating} from '../controllers/employee.controller.js';
+import {getAll, getOne, insertOne, updateOne, deleteOne, getJounge, getSalary,  refresh, getRating} from '../controllers/employee.controller.js';
 
 const router = Router();
 
 router.get('/',getAll)
-router.get('/registro', getInsertOne)
+
 router.get('/mejor_empleado', getRating)
 router.get('/:workerNumber',getOne)
 router.post('/',insertOne)

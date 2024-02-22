@@ -12,10 +12,10 @@ app.set('view engine', 'ejs');
 config()
 
 
-app.use((req, res, next) => {
-    res.setHeader('Refresh', '25'); // Establece la cabecera Refresh para recargar la página cada 20 segundos
-    next();
-});
+// app.use((req, res, next) => {
+//     res.setHeader('Refresh', '25'); // Establece la cabecera Refresh para recargar la página cada 20 segundos
+//     next();
+// });
 
 app.use('', employeerRouter);
 

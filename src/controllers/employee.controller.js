@@ -11,9 +11,6 @@ const getAll = async (req, res) => {
       })
 }
 
-const getInsertOne = async (req, res) => {
-   res.render('../src/views/insert.ejs')
-}
 
 const getOne = async (req, res) => {
    EmployeeDao.getOne(req.params.workerNumber)
@@ -37,7 +34,7 @@ const insertOne = async (req, res) => {
    EmployeeDao.insertOne(req.body)
       .then(result => {
          if (result)
-            res.setHeader('Refresh', '5').redirect('/');
+            res.redirect('/')
       }).catch(err => {
          res.json({ "status": "Server unaviable" })
          console.log(err)
@@ -56,11 +53,15 @@ const updateOne = async (req, res) => {
       })
 }
 
-const deleteOne = async (req, res, next) => {
+const deleteOne = async (req, res,) => {
    EmployeeDao.deleteOne(req.params.workerNumber)
       .then(result => {
          if (result) {
-            res.status(200).redirect('/');
+           try{
+            res.redirect('/')
+           }catch(err){
+               res.json({ "status": "Server unaviablehgfhg" })
+            }
          }
          else{
             res.json({ "status": "employee not found" })
@@ -68,7 +69,7 @@ const deleteOne = async (req, res, next) => {
       })
       .catch(err => {
          // console.log(err.msg)
-         res.json({ "status": "Server unaviable" })
+        res.redirect('/')
       })
 
 }
@@ -109,4 +110,4 @@ const getRating = async (req, res) => {
       })
 }
 
-export { getAll, getOne, insertOne, updateOne, deleteOne, getJounge, getSalary, getInsertOne, refresh, getRating} 
+export { getAll, getOne, insertOne, updateOne, deleteOne, getJounge, getSalary, refresh, getRating} 

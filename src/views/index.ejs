@@ -22,7 +22,7 @@
       <div data-role="navbar">
         <ul>
           <li><a href="#inicio" data-icon="home" class="ui-btn-active">Inicio</a></li>
-          <li><a href='/registro' data-icon="plus">Registrar</a></li>
+          <li><a href='#registro' data-icon="plus">Registrar</a></li>
           <li><a href="/mejor_empleado" data-icon="phone">Mejor empleado </a></li>
         </ul>
       </div>
@@ -32,10 +32,11 @@
     <!-- content -->
     <div data-role="content">
       <p><img src="img/abarrotes.png" alt="" style="height: 100px;"> 
-        <p>Bienvenido al control de empleados</p>
-        <p>Agregamos empleados y si su raking de aprobechamiento es actualmente el mejor lo mostramos en un card nadamas jaja <a href="#productsTable">Mira los empleados</a></p>
-        <p>El fin de esta app es getionar empleados y ver quien tuvo un ratin de registro de mayor aprobechamiento</p>
-    </div>
+      <p>Bienvenido al control de empleados</p>
+      <p>Agregamos empleados y si su ranking de aprovechamiento es actualmente el mejor lo mostramos en un card nada más jaja <a href="#productsTable">Mira los empleados</a></p>
+      <p>El fin de esta app es gestionar empleados y ver quién tuvo un récord de registro de mayor aprovechamiento</p>
+  </div>
+  
     <div data-role="footer">
       <p style="text-align: center;">Github/JazzoLopez </p>
     </div>
@@ -49,7 +50,7 @@
       <div data-role="navbar">
         <ul>
           <li><a href="#inicio" data-icon="home" class="ui-btn-active">Inicio</a></li>
-          <li><a href="/registro" data-icon="plus">Registrar</a></li>
+          <li><a href="#registro" data-icon="plus">Registrar</a></li>
           <li><a href="/mejor_empleado" data-icon="phone">Contactos</a></li>
         </ul>
       </div>
@@ -102,5 +103,54 @@
     </div>
   </div>
 
+
+
+
+
+  <div data-role="page" id="registro" >
+
+      <!-- Encabezado con barra de navegación -->
+      <div data-role="header" data-position="fixed">
+        <h1>Registro de empleados</h1>
+        <a href="#inicio" data-icon="home" class="ui-btn-right">Inicio</a>
+      </div>
+    
+      <!-- Contenido -->
+      <div data-role="content">
+    
+        <!-- Formulario de Registro -->
+        <form action="/" method="post">
+          <label for="workerNumber">Numero de trabajador:</label>
+          <input type="number" name="workerNumber" id="workerNumber" required>
+    
+          <label for="name">Nombre(s):</label>
+          <input type="text" name="name" id="name" required>
+    
+          <label for="lastname">Apellidos:</label>
+          <input type="text" name="lastname" id="lastname" required>
+    
+          <label for="department">Departamento:</label>
+          <input type="text" name="department" id="department" required>
+    
+          <label for="age">Edad:</label>
+          <input type="number" min="18" name="age" id="age" required>
+    
+          <label for="salary">Salario:</label>
+          <input type="text" name="salary" id="salary" required>
+    
+          <label for="rating">clasificación:</label>
+          <input type="number" min="1" max="10"  name="rating" id="rating" required>
+    
+          <button type="submit">Registrar Empleado</button>
+        </form>
+    
+      </div>
+    
+      <!-- Pie de página -->
+      <div data-role="footer" data-position="fixed">
+        <p style="text-align: center;">Github/JazzoLopez </p>
+      </div>
+    </div>
+  </div>
 
 </body>
